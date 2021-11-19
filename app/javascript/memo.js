@@ -1,5 +1,7 @@
 const buildHTML = (XHR) => {
+  debugger;
   const item = XHR.response.post;
+  console.log(XHR.response)
   const html = `
     <div class="post">
       <div class="post-date">
@@ -19,7 +21,7 @@ function post (){
     const form = document.getElementById("form");
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
-    XHR.open("POST", "/post", true);
+    XHR.open("POST", "/posts", true);
     XHR.responseType = "json";
     XHR.send(formData);
     XHR.onload = () => {
